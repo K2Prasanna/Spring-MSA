@@ -1,0 +1,19 @@
+server.port: 8097
+security:
+  oauth2:
+    client:
+      clientId: 32e6670d126d55abeb12
+      clientSecret: 5cf5c9bfb657aa342b2549f052e6a97b3ce0a01a
+      accessTokenUri: https://github.com/login/oauth/access_token
+      userAuthorizationUri: https://github.com/login/oauth/authorize
+      clientAuthenticationScheme: form
+      #preEstablishedRedirectUri: http://localhost:8097/home
+      #useCurrentUri: false
+      #tokenName: code
+      authenticationScheme: query
+    resource:
+      userInfoUri: https://api.github.com/user
+      preferTokenInfo: false
+logging:
+  level: 
+    org.springframework.security: DEBUG

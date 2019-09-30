@@ -1,0 +1,27 @@
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/K2Prasanna/spring-cloud-config
+          #username: user
+          #password: pass
+          #http://localhost:9001/s1rates-default.json
+          search-paths:            - 'station*'
+          repos:
+            #http://localhost:9001/s1rates/perf            perf:
+              pattern:
+                - "*/perf"
+              uri: https://github.com/K2Prasanna/spring-cloud-config-perf
+              search-paths:
+                - 'station*'  security:    user:      name: testuser
+      password: testuser
+              
+server:  port: 9001
+
+#deprecated
+security:  basic:    enabled: true
+    
+logging:  level:
+    org.springframework: DEBUG
+      
